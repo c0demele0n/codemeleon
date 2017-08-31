@@ -1,0 +1,55 @@
+$space-inset-button: (
+  small: $space-m,
+  medium: rem-calc(24)
+);
+
+.button {
+  @include vertical-rhythm;
+  @include space-inset-squish($space-inset-button);
+
+  @include attention(self) {
+    text-decoration: none;
+  }
+
+  &[href^="mailto:"] {
+    @include icon('mail');
+  }
+
+  &[href^="#hero"] {
+    @include icon-block('chevron-up');
+  }
+
+  main &[href^="#"] {
+    @include icon('chevron-down', true);
+  }
+
+  &.circle {
+    @include background-color($color-primary, true);
+    position: relative;
+    padding: rem-calc(24);
+    border-radius: 50%;
+
+    &:before {
+      @include absolute-center;
+    }
+  }
+
+  &.clear {
+    border: none;
+  }
+
+  &.white {
+    @include attention(true) {
+      @include background-color(transparent);
+      border-color: $color-white;
+    }
+  }
+}
+
+.menu-button {
+  @include icon('navicon');
+
+  @include breakpoint(large) {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+$space-stack-card: (
+  small: $space-l,
+  medium: $space-xl
+);
+
+$space-stack-card-heading: (
+  small: $space-s,
+  medium: $space-m
+);
+
+.card {
+  @include space-stack($space-stack-card);
+
+  h3 {
+    @include space-stack($space-stack-card-heading);
+    @include remove-colorline;
+
+    &.design {
+      @include icon('pencil');
+      color: $color-purple;
+    }
+
+    &.development {
+      @include icon('code');
+      color: $color-secondary;
+    }
+
+    &.websites {
+      @include icon('desktop');
+      color: $color-yellow;
+    }
+
+    &.apps {
+      @include icon('mobile');
+      color: $color-orange;
+    }
+  }
+}
+
+.card-section {
+  @include space-inset;
+}

@@ -1,0 +1,79 @@
+$timeline-block-color: lighten($color-secondary, $shade-m);
+$timeline-block-color-background: lighten($color-secondary, $shade-l);
+
+.timeline-block {
+  position: relative;
+
+  &:nth-child(odd) {
+    @include breakpoint(large) {
+      text-align: right;
+    }
+  }
+
+  &:last-child {
+    .cell:first-child:before {
+      content: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .cell:first-child {
+    position: relative;
+
+    &:before {
+      @include horizontal-center;
+      @include background-color($timeline-block-color-background);
+      content: "";
+      top: 0;
+      width: $space-xs;
+      height: 100%;
+    }
+  }
+
+  h4 {
+    color: $color-primary;
+  }
+
+  h5 {
+    color: $color-highlight;
+  }
+
+  p {
+    margin-bottom: $space-l;
+
+    @include breakpoint(medium) {
+      margin-bottom: $space-xl;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: $space-l;
+    }
+
+    @include breakpoint(max) {
+      margin-bottom: $space-xl;
+    }
+  }
+}
+
+.timeline-block-circle {
+  @include background-color($timeline-block-color-background);
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  text-align: center;
+  border: $border-width-m solid $timeline-block-color;
+  border-radius: 50%;
+
+  p {
+    @include absolute-center;
+    width: 100%;
+
+    @include breakpoint(max down) {
+      @include vertical-rhythm(-1);
+    }
+  }
+}

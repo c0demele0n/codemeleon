@@ -1,0 +1,26 @@
+$space-stack-progress: (
+  small: $space-l,
+  large: $space-xl
+);
+
+.progress {
+  @include space-stack;
+
+  &:last-child {
+    @include space-stack($space-stack-progress);
+  }
+}
+
+.progress-meter {
+  position: relative;
+}
+
+.progress-title,
+.progress-value {
+  @include vertical-center;
+  color: $color-white;
+}
+
+.progress-title {
+  left: $space-m;
+}

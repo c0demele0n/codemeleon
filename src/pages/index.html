@@ -1,0 +1,102 @@
+---
+description: Lorem ipsum.
+keywords: one, two, three
+---
+
+<header id="hero" data-magellan-target="hero">
+  {{> hero-block content.hero}}
+</header>
+
+<section id="entry" data-magellan-target="entry" role="region">
+  <h2>{{{content.entry.headline}}}</h2>
+
+  <div class="definition">
+    <h3>{{content.entry.subline}}</h3>
+    <p>{{{content.entry.phonetics}}}</p>
+    <p>{{content.entry.text}}</p>
+    <dl>
+      {{#each content.entry.items}}
+        <dt>{{title}}</dt>
+        <dd>{{text}}</li>
+      {{/each}}
+    </dl>
+  </div>
+</section>
+
+<section id="about" class="primary" data-magellan-target="about" role="region">
+  <h2>{{{content.about.headline}}}</h2>
+  <img class="portrait" src="{{root}}/assets/img/{{content.about.image}}" alt="{{content.about.alt}}">
+  <p>{{content.about.text}}</p>
+</section>
+
+<section id="services" data-magellan-target="services" role="region">
+  <h2>{{{content.services.headline}}}</h2>
+
+  <div class="grid-container" data-equalizer data-equalize-on="medium">
+    <div class="grid-x grid-margin-x">
+      {{#each content.services.items}}
+        <div class="medium-6 cell">
+          {{> card this}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a class="button secondary" href="#contact" data-smooth-scroll data-animation-easing="swing">Sowas brauche ich!</a>
+  </div>
+</section>
+
+<div class="parallax parallax-quote">
+  <div class="parallax-content">
+    {{> blockquote content.quote}}
+  </div>
+</div>
+
+<section id="tools" data-magellan-target="tools" role="region">
+  <h2>{{{content.tools.headline}}}</h2>
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      {{#each content.tools.categories}}
+        <div class="medium-4 cell">
+          <h3>{{this.title}}</h3>
+
+          {{#each this.items}}
+            {{> progress this}}
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a class="button secondary" href="#contact" data-smooth-scroll data-animation-easing="swing">Ich bin überzeugt!</a>
+  </div>
+</section>
+
+<div class="parallax parallax-stats">
+  <div class="parallax-content">
+    <div class="grid-x grid-padding-x">
+      {{#each content.stats}}
+        <div class="medium-3 cell">
+          {{> stat-block this}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<section id="experience" data-magellan-target="experience" role="region">
+  <h2>{{{content.experience.headline}}}</h2>
+
+  <div class="timeline">
+    {{#each content.experience.items}}
+      {{#even @index}}
+        {{> timeline-block this even=true}}
+      {{else}}
+        {{> timeline-block this}}
+      {{/even}}
+    {{/each}}
+  </div>
+</section>

@@ -1,0 +1,220 @@
+// Colors
+// ------
+
+@mixin color($color, $alt: false) {
+  color: $color;
+
+  @include attention() {
+    color: if($alt, lighten($color, $shade-m), darken($color, $shade-m));
+  }
+}
+
+@mixin background-color($color, $hover: false) {
+  $background-color: $color;
+  $color: color-pick-contrast($color, $font-color $font-color-alt, -4);
+
+  background-color: $background-color;
+  color: $color;
+
+  @if $hover {
+    @include attention() {
+      background-color: smart-scale($background-color, $shade-m);
+      color: $color;
+    }
+  }
+}
+
+
+// Colorline
+// ---------
+
+@mixin colorline-color($color) {
+  &:after {
+    background-color: $color;
+  }
+}
+
+@mixin colorline-width($width) {
+  &:after {
+    width: $width;
+  }
+}
+
+@mixin colorline-align($align, $offset: 0) {
+  text-align: $align;
+
+  &:after {
+    @if $align == center {
+      @include horizontal-center;
+    } @else {
+      position: absolute;
+      #{$align}: $offset;
+    }
+  }
+}
+
+@mixin colorline($color: $color-primary, $align: center, $width: $space-xl, $height: $space-xs, $top: $space-xs, $offset: 0) {
+  @include colorline-align($align, $offset);
+  @include colorline-color($color);
+  @include colorline-width($width);
+  position: relative;
+
+  &:after {
+    content: "";
+    top: 100%;
+    margin-top: $top;
+    height: $height;
+    border-radius: $border-radius-m;
+    transition: width $duration-s;
+
+    @include breakpoint(medium) {
+      height: $height * 2;
+    }
+  }
+}
+
+@mixin remove-colorline() {
+  &:after {
+    content: none;
+  }
+}
+
+
+// Fonts
+// -----
+
+@mixin font-face($font, $filename: 'regular', $weight: $font-weight-normal, $style: normal) {
+  $file: $font-face-path + $font + '/' + $filename;
+
+  @font-face {
+    font-family: $font;
+    src: url($file + ".woff2") format("woff2"),
+         url($file + ".woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+
+// Vertical Rhythm
+// ---------------
+
+@mixin vertical-rhythm($increment: 0, $lh: $line-height-paragraph, $breakpoints: 48em 75em) {
+  $font-size: calc-font-size($increment);
+  $line-height-paragraph: calc-line-height($font-size, $lh);
+
+  font-size: rem-calc($font-size);
+  line-height: rem-calc($line-height-paragraph);
+
+  @each $breakpoint in $breakpoints {
+    @include breakpoint($breakpoint) {
+      $font-size: calc-font-size($increment, $breakpoint);
+      $line-height-paragraph: calc-line-height($font-size, $lh);
+
+      font-size: rem-calc($font-size);
+      line-height: rem-calc($line-height-paragraph);
+    }
+  }
+}
+
+
+// Space
+// -----
+
+@mixin space-inset($space: $space-inset) {
+  padding: map-get($space, 'small');
+
+  @each $key, $value in map-remove($space, 'small') {
+    @include breakpoint($key) {
+      padding: $value;
+    }
+  }
+}
+
+@mixin space-inset-squish($space: $space-inset) {
+  $value: map-get($space, 'small');
+  padding: $value / 2 $value;
+
+  @each $key, $value in map-remove($space, 'small') {
+    @include breakpoint($key) {
+      padding: $value / 2 $value;
+    }
+  }
+}
+
+@mixin space-inset-stretch($space: $space-inset) {
+  $value: map-get($space, 'small');
+  padding: $value * 2 $value;
+
+  @each $key, $value in map-remove($space, 'small') {
+    @include breakpoint($key) {
+      padding: $value * 2 $value;
+    }
+  }
+}
+
+@mixin space-stack($space: $space-stack) {
+  margin: 0 0 map-get($space, 'small') 0;
+
+  @each $key, $value in map-remove($space, 'small') {
+    @include breakpoint($key) {
+      margin-bottom: $value;
+    }
+  }
+}
+
+@mixin space-inline($space: $space-inline) {
+  margin: 0 map-get($space, 'small') 0 0;
+
+  @each $key, $value in map-remove($space, 'small') {
+    @include breakpoint($key) {
+      margin-right: $value;
+    }
+  }
+}
+
+
+// Icons
+// -----
+
+@mixin icon-content($id) {
+  font-family: 'FontAwesome';
+  content: '#{map-get($icon-mapping, $id)}';
+}
+
+@mixin icon($id, $flip: false) {
+  $side: if($flip, 'after', 'before');
+  $margin: if($flip, 'margin-left', 'margin-right');
+
+  &:#{$side} {
+    @include icon-content($id);
+    display: inline-block;
+    #{$margin}: $space-s;
+
+    @include breakpoint(large) {
+      #{$margin}: $space-m;
+    }
+  }
+}
+
+@mixin icon-block($id) {
+  &:before {
+    @include icon-content($id);
+    display: block;
+  }
+}
+
+
+// Misc
+// ----
+
+@mixin attention($self: false, $addition: false) {
+  $selectors: '&:hover, &:active, &:focus';
+  $selectors: if($self, '&, ' + $selectors, $selectors);
+  $selectors: if($addition, $selectors + ', ' + $addition, $selectors);
+
+  #{$selectors} {
+    @content;
+  }
+}

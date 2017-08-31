@@ -1,0 +1,19 @@
+primary:
+  - text: "codemeleon"
+    url: "#entry"
+  - text: "Person"
+    url: "#about"
+  - text: "Leistungen"
+    url: "#services"
+  - text: "Werkzeuge"
+    url: "#tools"
+  - text: "Erfahrung"
+    url: "#experience"
+  - text: "Kontakt"
+    url: "#contact"
+
+meta:
+  - text: "Datenschutz"
+    url: "#datenschutz"
+  - text: "Impressum"
+    url: "#impressum"

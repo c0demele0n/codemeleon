@@ -1,0 +1,172 @@
+// Colors
+// ------
+
+$color-primary:   #56B88B;
+$color-secondary: #5697B7;
+$color-highlight: #C35D94;
+$color-yellow:    #C3975A;
+$color-orange:    #C36A5A;
+$color-purple:    #8264C1;
+
+$color-white:           #fff;
+$color-neutral-lighter: #e4e4e4;
+$color-neutral-light:   #b4b4b4;
+$color-neutral:         #848484;
+$color-neutral-dark:    #545454;
+$color-neutral-darker:  #242424;
+$color-black:           #000;
+
+$color-success: #3adb76;
+$color-warning: #ffae00;
+$color-alert:   #cc4b37;
+
+$shade-m: 10%;
+$shade-l: 40%;
+
+
+// Fonts
+// -----
+
+$font-color: $color-neutral-darker;
+$font-color-alt: $color-white;
+
+$font-face-path: '../fonts/';
+$font-stack: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-primary: 'latolatin';
+$font-secondary: 'opensans';
+$font-family-primary: $font-primary, $font-stack;
+$font-family-secondary: $font-secondary, $font-stack;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$line-height-paragraph: 1.5;
+$line-height-header: 1.2;
+
+$modularscale: (
+  base: 1em,
+  ratio: 1.2,
+  48em: (
+    base: 1.125em,
+    ratio: 1.25,
+  ),
+  75em: (
+    base: 1.25em,
+    ratio: 1.333
+  )
+);
+
+
+// Space
+// -----
+
+$baseline:      4px;
+$space-default: rem-calc($baseline * 4);
+$space-xxs:     rem-calc($space-default / 8);
+$space-xs:      rem-calc($space-default / 4);
+$space-s:       rem-calc($space-default / 2);
+$space-m:       rem-calc($space-default);
+$space-l:       rem-calc($space-default * 2);
+$space-xl:      rem-calc($space-default * 4);
+$space-xxl:     rem-calc($space-default * 8);
+
+$space-inset: (
+  small: $space-m,
+  large: $space-l
+);
+
+$space-stack: (
+  small: $space-m,
+  large: $space-l
+);
+
+$space-inline: (
+  small: $space-m,
+  large: $space-l
+);
+
+
+// Grid
+// ----
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  max: 1200px
+);
+
+$grid-space: (
+  small: $space-m,
+  medium: $space-l,
+  large: $space-xl
+);
+
+
+// Icons
+// -----
+
+$icon-mapping: (
+  'calendar':     '\f073',
+  'chevron-up':   '\f077',
+  'chevron-down': '\f078',
+  'code':         '\f121',
+  'coffee':       '\f0f4',
+  'comments':     '\f086',
+  'cutlery':      '\f0f5',
+  'desktop':      '\f108',
+  'external':     '\f14c',
+  'hourglass':    '\f254',
+  'mail': 		    '\f0e0',
+  'map-marker':   '\f041',
+  'mobile':       '\f10b',
+  'navicon': 	    '\f0c9',
+  'pencil':       '\f040',
+  'phone': 	      '\f095',
+  'user':         '\f007',
+);
+
+
+// Border
+// ------
+
+$border-width-s: rem-calc(1);
+$border-width-m: rem-calc(2);
+$border-width-l: rem-calc(4);
+$border-radius-s: rem-calc(6);
+$border-radius-m: rem-calc(12);
+
+$border: $border-width-m solid $font-color;
+$border-alt: $border-width-m solid $font-color-alt;
+
+
+// Duration
+// --------
+
+$duration-s: 150ms;
+$duration-m: 250ms;
+$duration-l: 500ms;
+
+
+// Layer
+// -----
+
+$layer-s: -100;
+$layer-m: 1;
+$layer-l: 100;
+$layer-xl: 999;
+
+
+// Shadow
+// ------
+
+$shadow-m: 0 0 rem-calc(4) 0;
+$shadow-l: 0 0 $space-m -rem-calc(4);
+
+
+// Overlay
+// -------
+
+$overlay-color: rgba($font-color, 0.6);
+$overlay-color-alt: rgba($font-color-alt, 0.6);

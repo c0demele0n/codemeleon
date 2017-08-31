@@ -1,0 +1,36 @@
+.stat-block {
+  @include vertical-rhythm(2);
+  text-align: center;
+
+  &.experience {
+    color: lighten($color-secondary, $shade-m);
+
+    .stat {
+      @include icon-block('calendar');
+    }
+  }
+
+  &.hours {
+    color: lighten($color-yellow, $shade-m);
+
+    .stat {
+      @include icon-block('hourglass');
+    }
+  }
+
+  &.coffee {
+    color: lighten($color-orange, $shade-m);
+
+    .stat {
+      @include icon-block('coffee');
+    }
+  }
+
+  &.pizza {
+    color: lighten($color-purple, $shade-m);
+
+    .stat {
+      @include icon-block('cutlery');
+    }
+  }
+}

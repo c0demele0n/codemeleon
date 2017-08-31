@@ -1,0 +1,61 @@
+form, label, #{text-inputs()}, select, textarea, legend,
+figure,
+table {
+	@include vertical-rhythm;
+}
+
+img,
+form, fieldset,
+figure,
+table {
+	@include space-stack;
+}
+
+
+// Media
+// -----
+
+svg {
+	fill: currentColor;
+	transition: fill $duration-m;
+}
+
+figure {
+	position: relative;
+}
+
+figcaption {
+	@include horizontal-center;
+	@include space-inset-squish;
+	@include background-color($overlay-color);
+	bottom: 0;
+	width: 100%;
+	z-index: $layer-m;
+}
+
+
+// Forms
+// -----
+
+// #{text-inputs()},
+// select {
+// 	height: $space-l;
+// }
+//
+// #{text-inputs()} {
+// 	padding: 0 $space-m;
+// }
+//
+// select {
+// 	padding-left: 0 0 0 $space-m;
+// }
+//
+// textarea {
+// 	min-height: $space-xxl;
+// }
+
+
+// Tables
+// ------
+
+// td {}

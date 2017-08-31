@@ -1,0 +1,28 @@
+<address class="vcard">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="medium-4 cell">
+				<p class="vcard-name">
+					<span class="org">{{client.organisation}}</span><br>
+					<span class="fn">{{client.name}}</span>
+					<!-- <span class="category">{{client.duty}}</span> -->
+				</p>
+			</div>
+
+			<div class="medium-4 cell">
+				<p class="adr vcard-address">
+					<span class="street-address">{{client.street}}</span><br>
+					<span class="postal-code">{{client.zip}}</span> <span class="locality">{{client.city}}</span>
+				</p>
+			</div>
+
+			<div class="medium-4 cell">
+				<p class="vcard-contact">
+					<a class="tel" href="tel:{{client.tel}}">{{client.phone}}</a><br>
+					<a class="email" href="mailto:{{client.mail}}">{{client.mail}}</a>
+					<!-- <a class="url" href="{{site.url}}" target="_blank">{{site.url}}</a> -->
+				</p>
+			</div>
+		</div>
+	</div>
+</address>

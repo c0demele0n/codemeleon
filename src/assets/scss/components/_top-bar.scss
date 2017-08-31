@@ -1,0 +1,56 @@
+.top-bar {
+  @include space-inset-squish;
+  @include background-color($color-white);
+  box-shadow: $shadow-m;
+  transition: background-color $duration-m, padding $duration-m;
+
+  nav .menu {
+    align-items: center;
+
+    a {
+      transition: color $duration-m;
+    }
+
+    &.mobile {
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+
+    &.colorline {
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+  }
+
+  [href^="tel:"],
+  [href^="mailto:"] {
+      margin-right: get-side($global-menu-padding, right);
+  }
+
+  [href^="tel:"] {
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      @include icon-block('phone');
+    }
+
+    @include breakpoint(max) {
+      &:first-child {
+        display: block;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &.is-at-top {
+    @include space-inset;
+    @include background-color($overlay-color);
+  }
+}

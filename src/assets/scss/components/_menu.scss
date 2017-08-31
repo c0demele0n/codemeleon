@@ -1,0 +1,40 @@
+.menu {
+  a,
+  .button {
+    @include vertical-rhythm;
+  }
+
+  a {
+    @include attention(true) {
+      color: inherit;
+    }
+  }
+
+  &.small .button {
+    @include vertical-rhythm(-1);
+  }
+
+  &.underline li:not(:last-child) .button {
+    @include attention() {
+      text-decoration: underline;
+    }
+  }
+
+  &.colorline {
+    li:nth-child(n+2) a {
+      @include colorline($color-primary, left, 0, $space-xxs, -$space-s, get-side($global-menu-padding, left));
+
+      &:hover,
+      &:active,
+      &.is-active {
+        @include colorline-width($space-l);
+      }
+    }
+
+    li:nth-child(3) a { @include colorline-color($color-highlight); }
+    li:nth-child(4) a { @include colorline-color($color-secondary); }
+    li:nth-child(5) a { @include colorline-color($color-yellow); }
+    li:nth-child(6) a { @include colorline-color($color-orange); }
+    li:nth-child(7) a { @include colorline-color($color-purple); }
+  }
+}

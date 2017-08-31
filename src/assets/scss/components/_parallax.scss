@@ -1,0 +1,56 @@
+.parallax {
+  @include space-inset-stretch($grid-space);
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint(large) {
+    @include space-inset($grid-space);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($font-color, 0.75);
+    z-index: $layer-m;
+  }
+}
+
+.parallax-content {
+  @include xy-grid-container;
+  position: relative;
+  z-index: $layer-m + 1;
+
+  @include breakpoint(medium) {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    padding-left: 0;
+    margin-bottom: 0;
+    border: none;
+
+    p,
+    cite {
+      @include vertical-rhythm(3);
+      color: $font-color-alt;
+      font-weight: $font-weight-light;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.parallax-quote {
+  background-image: url(../img/parallax-quote.jpg);
+}
+
+.parallax-stats {
+  background-image: url(../img/parallax-stats.jpg);
+}

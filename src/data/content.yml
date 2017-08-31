@@ -1,0 +1,110 @@
+hero:
+  headline: "codemeleon [kɔʊ̯dmiːliən]"
+  text: "Vielfalt, Entwicklung, Kreativität, Logik, Design"
+  button: "Was bedeutet das?"
+  link: "#entry"
+
+entry:
+  headline: "Was ist ein <em>codemeleon</em>?"
+  subline: "code|me|le|on, das"
+  phonetics: "Substantiv, Neutrum<br>[kɔʊ̯dmiːliən]"
+  text: "Ein vielfältiges Individuum aus dem Bereich der Web-Entwicklung, welches sich zusätzlich auf einen Schwerpunkt, bspw. die Frontend-Entwicklung, spezialisiert hat. Seine hohe Auffassungsgabe und die regelmäßige Kooperation mit Designern verleihen diesem ein kreatives Auge für Gestaltungsprozesse. Durch seine Umsicht gelingt es ihm außerdem, sich sehr gut an seine Umgebung anzupassen."
+  items:
+    - title: "Vorkommen"
+      text: "äußerst selten, sehr schwer zu finden"
+    - title: "Lebensraum"
+      text: "interdisziplinäre Teams, Digital- und App-Agenturen"
+    - title: "Merkmale"
+      text: "zuverlässig, teamfähig, kreativ, eigeninitiativ, anpassungsfähig"
+
+about:
+  headline: "Exemplar: Thomas&nbsp;Wedler"
+  text: "Selbständiger Web-Entwickler mit Blick über den Tellerrand. Fokus auf Frontend-Entwicklung mit einem Auge für Design. Klassische Schwächen für Kaffee und Pizza."
+  image: "thomas-wedler.png"
+  alt: "Thomas Wedler"
+
+services:
+  headline: "Leistungen"
+  items:
+    - title: "Design"
+      text: "Die Gestaltung einer Website oder einer App besteht nicht nur aus Schriften und Farben. Usability und User-Experience sind ebenfalls wichtige Bestandteile sowie eine solide Informationsarchitektur."
+      key: "design"
+    - title: "Entwicklung"
+      text: "Ob Frontend- oder Backend-Entwicklung, durch die passende Implementierung werden Konzept und Design einer Website oder einer App zu einem handfesten, zugeschnittenen Produkt."
+      key: "development"
+    - title: "Webseiten"
+      text: "Von Landing Pages über Microsites oder One-Pager bis hin zu kompletten Webauftritten: diese Arten der Website können mit und ohne Anbindung an ein Content Management System (CMS) entwickelt werden."
+      key: "websites"
+    - title: "Apps"
+      text: "Die Spezialisierung auf webbasierte Apps wie die klassische Web-App oder die hybride App ermöglicht die Implementierung der benötigten Anforderungen auf einer einheitlichen Codebasis."
+      key: "apps"
+
+quote:
+  text: "It doesn’t make sense to hire smart people and then tell them what to do."
+  cite: "Steve Jobs"
+
+tools:
+  headline: "Werkzeuge"
+  categories:
+    - title: "Design"
+      items:
+        - title: "Sketch"
+          value: "75"
+        - title: "Photoshop"
+          value: "65"
+    - title: "Frontend"
+      items:
+        - title: "HTML5"
+          value: "95"
+        - title: "CSS3"
+          value: "95"
+        - title: "JavaScript"
+          value: "85"
+        - title: "React"
+          value: "60"
+    - title: "Backend"
+      items:
+        - title: "WordPress"
+          value: "80"
+        - title: "Node.js"
+          value: "65"
+        - title: "PHP"
+          value: "60"
+
+stats:
+  - title: "Jahre Erfahrung"
+    value: "7+"
+    key: "experience"
+  - title: "Arbeitsstunden"
+    value: "7.520"
+    key: "hours"
+  - title: "Tassen Kaffee"
+    value: "3.245"
+    key: "coffee"
+  - title: "Pizzen"
+    value: "364"
+    key: "pizza"
+
+experience:
+  headline: "Erfahrung"
+  items:
+    - company: "codemeleon"
+      job: "Selbstständiger Web-Entwickler"
+      text: "Konzeption, Design und Entwicklung von Webseiten, Web-Apps und hybriden Apps"
+      from: "Apr 2017"
+      to: "heute"
+    - company: "Hochschule Worms"
+      job: "Master-Studium Mobile Computing"
+      text: "Schwerpunkte: Mobile Usability, User-Experience, iterative Designprozesse, Scrum"
+      from: "Apr 2017"
+      to: "heute"
+    - company: "Schaller & Partner GmbH"
+      job: "Web-Entwickler"
+      text: "Konzeption und Entwicklung von Webseiten, Web-Apps und HTML5-Games"
+      from: "Okt 2013"
+      to: "März 2017"
+    - company: "Julius-Maximilians-Universität Würzburg"
+      job: "Bachelor-Studium Mensch-Computer-Systeme"
+      text: "Schwerpunkte: Usability, Evaluation, Software Engineering, Programmierung"
+      from: "Apr 2010"
+      to: "Sept 2013"

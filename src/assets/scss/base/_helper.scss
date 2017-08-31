@@ -1,0 +1,31 @@
+.definition {
+  max-width: rem-calc(768);
+  margin: 0 auto;
+
+  @include breakpoint(medium) {
+    background: url(../img/thinking.svg) no-repeat top right / rem-calc(96);
+  }
+
+  @include breakpoint(large) {
+    background-size: $space-xxl;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.portrait {
+	border: $border-width-l solid $font-color-alt;
+	border-radius: 50%;
+	width: rem-calc(192);
+}
+
+.lead {
+  @include vertical-rhythm;
+  font-weight: $font-weight-bold;
+}
+
+.stat {
+  @include vertical-rhythm(3);
+}

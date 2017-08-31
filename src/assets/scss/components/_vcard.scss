@@ -1,0 +1,20 @@
+.vcard-name,
+.vcard-address,
+.vcard-contact {
+  &:before {
+    @include vertical-rhythm(2);
+    color: $color-highlight;
+  }
+}
+
+.vcard-name {
+  @include icon-block('user');
+}
+
+.vcard-address {
+  @include icon-block('map-marker');
+}
+
+.vcard-contact {
+  @include icon-block('comments');
+}

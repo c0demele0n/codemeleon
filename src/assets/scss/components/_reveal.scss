@@ -1,0 +1,11 @@
+.reveal {
+  @include space-inset($grid-space);
+
+  h3 {
+    margin-top: $space-l;
+
+    @include breakpoint(large) {
+      margin-top: $space-xl;
+    }
+  }
+}

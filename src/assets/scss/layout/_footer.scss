@@ -1,0 +1,33 @@
+[role="contentinfo"] {
+  @include background-color(lighten($color-secondary, $shade-l));
+
+  [role="region"] {
+    text-align: center;
+
+    h2 {
+      @include colorline-color($color-highlight);
+    }
+
+    h3 {
+      @include colorline-align(center);
+    }
+
+    address a {
+      @include color($color-highlight);
+    }
+  }
+
+  .top-bar {
+    @include background-color(darken($color-secondary, $shade-m));
+    box-shadow: none;
+
+    @include breakpoint(small down) {
+      display: block;
+      text-align: center;
+
+      .menu {
+        justify-content: center;
+      }
+    }
+  }
+}

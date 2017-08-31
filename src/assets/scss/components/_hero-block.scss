@@ -1,0 +1,32 @@
+$space-inset-hero-block: (
+  small: $space-m,
+  medium: $space-l
+);
+
+.hero-block {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../img/hero.jpg') no-repeat center center / cover;
+}
+
+.hero-block-content {
+  @include space-inset($space-inset-hero-block);
+  @include background-color($overlay-color);
+  position: absolute;
+  left: $space-m;
+  right: $space-m;
+  bottom: $space-m;
+  border-radius: $border-radius-m;
+  z-index: $layer-m;
+
+  @include breakpoint(medium) {
+    left: $space-l;
+    right: $space-l;
+    bottom: $space-l;
+  }
+
+  @include breakpoint(large) {
+    max-width: rem-calc(1024);
+  }
+}

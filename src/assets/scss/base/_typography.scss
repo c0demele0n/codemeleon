@@ -1,0 +1,109 @@
+body,
+h5, h6, p,
+ol, ul, dl,
+blockquote, cite,
+address {
+	@include vertical-rhythm;
+}
+
+small {
+	@include vertical-rhythm(-1);
+}
+
+h1, h6, p,
+ol, ul, dl,
+blockquote,
+hr {
+	@include space-stack;
+}
+
+// Headings
+// --------
+
+$space-stack-header: (
+	small: rem-calc(48),
+	large: rem-calc(96)
+);
+
+$space-stack-header-s: (
+  small: $space-xs,
+  large: $space-s
+);
+
+$space-stack-header-l: (
+	small: $space-l,
+	large: $space-xl
+);
+
+h1 {
+  @include vertical-rhythm(4, $line-height-header);
+	font-weight: $font-weight-light;
+}
+
+h2 {
+  @include vertical-rhythm(3, $line-height-header);
+	@include space-stack($space-stack-header);
+	@include colorline;
+}
+
+h3 {
+  @include vertical-rhythm(2, $line-height-header);
+	@include space-stack($space-stack-header-l);
+	@include colorline($color-secondary, left, $space-l, $space-xxs);
+}
+
+h4 {
+  @include vertical-rhythm(1, $line-height-header);
+	@include space-stack($space-stack-header-s);
+}
+
+h5 {
+	@include space-stack($space-stack-header-s);
+}
+
+h6 {
+	font-weight: $font-weight-normal;
+	font-style: italic;
+}
+
+
+// Lists
+// -----
+
+dt {
+	color: $color-highlight;
+}
+
+dd {
+	margin-bottom: $space-s;
+}
+
+
+// Links
+// -----
+
+a {
+	text-decoration-skip: ink;
+}
+
+
+// Misc
+// ----
+
+blockquote {
+	padding-left: $space-s;
+
+	@include breakpoint(medium) {
+		padding-left: $space-m;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+address {
+	@include space-stack($space-stack-header-l);
+	font-style: normal;
+	text-align: center;
+}

@@ -1,0 +1,21 @@
+// Fonts
+// -----
+
+@include font-face($font-primary, 'light', $font-weight-light);
+@include font-face($font-primary, 'lightitalic', $font-weight-light, italic);
+
+@include font-face($font-primary);
+@include font-face($font-primary, 'italic', $font-weight-normal, italic);
+
+@include font-face($font-primary, 'bold', $font-weight-bold);
+@include font-face($font-primary, 'bolditalic', $font-weight-bold, italic);
+
+
+@include font-face($font-secondary, 'light', $font-weight-light);
+@include font-face($font-secondary, 'lightitalic', $font-weight-light, italic);
+
+@include font-face($font-secondary);
+@include font-face($font-secondary, 'italic', $font-weight-normal, italic);
+
+// @include font-face($font-secondary, 'bold', $font-weight-bold);
+// @include font-face($font-secondary, 'bolditalic', $font-weight-bold, italic);

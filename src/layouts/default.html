@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{> geo}}
+    {{> seo}}
+    {{> sm}}
+
+    {{#if title}}
+      <title>{{title}} | {{site.title}}</title>
+    {{else}}
+      <title>{{site.title}}</title>
+    {{/if}}
+
+    <link rel="shortcut icon" href="{{root}}assets/favicon.ico" />
+    <link rel="stylesheet" href="{{root}}assets/css/main.css">
+  </head>
+
+  <body>
+    <div class="off-canvas-wrapper">
+      {{> off-canvas}}
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        {{> header}}
+
+        <main role="main">
+          {{> body}}
+        </main>
+
+        {{> footer}}
+      </div>
+    </div>
+
+    {{> privacy}}
+    {{> imprint}}
+
+    <script src="{{root}}assets/js/main.js"></script>
+  </body>
+</html>
