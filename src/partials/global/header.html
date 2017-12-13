@@ -1,6 +1,6 @@
-<header role="banner">
+<header class="site-header">
   <div class="top-bar" data-module="fixed-header">
-    <nav class="top-bar-left" role="navigation">
+    <nav class="top-bar-left">
       <ul class="menu mobile">
         <li>{{> logo}}</li>
         <li>{{> menu-button}}</li>
@@ -17,7 +17,7 @@
         </li>
 
         <li>
-          <a class="button circle" href="mailto:{{client.mail}}"></a>
+          <a class="button circle" href="mailto:{{client.mail}}" data-module="spam-protection"></a>
         </li>
       </ul>
 		</div>

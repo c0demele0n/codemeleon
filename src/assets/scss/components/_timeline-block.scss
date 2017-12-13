@@ -38,7 +38,7 @@ $timeline-block-color-background: lighten($color-secondary, $shade-l);
   }
 
   h5 {
-    color: $color-highlight;
+    color: $color-accent;
   }
 
   p {
@@ -52,7 +52,7 @@ $timeline-block-color-background: lighten($color-secondary, $shade-l);
       margin-bottom: $space-l;
     }
 
-    @include breakpoint(max) {
+    @include breakpoint(xlarge) {
       margin-bottom: $space-xl;
     }
   }
@@ -72,7 +72,7 @@ $timeline-block-color-background: lighten($color-secondary, $shade-l);
     @include absolute-center;
     width: 100%;
 
-    @include breakpoint(max down) {
+    @include breakpoint(xlarge down) {
       @include vertical-rhythm(-1);
     }
   }

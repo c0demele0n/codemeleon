@@ -3,7 +3,7 @@
 .vcard-contact {
   &:before {
     @include vertical-rhythm(2);
-    color: $color-highlight;
+    color: $color-accent;
   }
 }
 

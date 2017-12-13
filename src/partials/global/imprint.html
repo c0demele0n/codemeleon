@@ -4,14 +4,18 @@
   <h3>Verantwortlich für den Inhalt</h3>
   <p>
     {{client.name}}<br>
+    Einzelunternehmer<br>
     {{client.street}}<br>
     {{client.zip}} {{client.city}}
   </p>
+
   <p>
     Tel.: <a href="tel:{{client.tel}}">{{client.phone}}</a><br>
-    E-Mail: <a href="mailto:{{client.mail}}">{{client.mail}}</a><br>
+    E-Mail: <a href="mailto:{{client.mail}}" data-module="spam-protection">{{client.mail}}</a><br>
     Internet: <a href="{{site.url}}">{{site.url}}</a>
   </p>
+
+  <p>Steuernummer: 37837/40010</p>
 
   <h3>Haftungsausschluss</h3>
 

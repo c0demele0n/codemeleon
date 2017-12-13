@@ -2,13 +2,13 @@
   max-width: rem-calc(768);
   margin: 0 auto;
 
-  @include breakpoint(medium) {
-    background: url(../img/thinking.svg) no-repeat top right / rem-calc(96);
-  }
-
-  @include breakpoint(large) {
-    background-size: $space-xxl;
-  }
+  // @include breakpoint(medium) {
+  //   background: url(../img/thinking.svg) no-repeat top right / rem-calc(96);
+  // }
+  //
+  // @include breakpoint(large) {
+  //   background-size: $space-xxl;
+  // }
 
   > :last-child {
     margin-bottom: 0;

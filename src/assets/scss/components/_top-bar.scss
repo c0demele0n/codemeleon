@@ -38,7 +38,7 @@
       @include icon-block('phone');
     }
 
-    @include breakpoint(max) {
+    @include breakpoint(xlarge) {
       &:first-child {
         display: block;
       }

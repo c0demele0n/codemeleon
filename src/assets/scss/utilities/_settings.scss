@@ -68,7 +68,7 @@ $global-width: map-get($breakpoints, max);
 $global-lineheight: $line-height-paragraph;
 $foundation-palette: (
   primary: $color-primary,
-  secondary: $color-highlight,
+  secondary: $color-accent,
   success: $color-success,
   warning: $color-warning,
   alert: $color-alert,

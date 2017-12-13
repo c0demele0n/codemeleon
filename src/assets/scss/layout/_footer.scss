@@ -1,11 +1,11 @@
-[role="contentinfo"] {
+.site-footer {
   @include background-color(lighten($color-secondary, $shade-l));
 
-  [role="region"] {
+  .section {
     text-align: center;
 
     h2 {
-      @include colorline-color($color-highlight);
+      @include colorline-color($color-accent);
     }
 
     h3 {
@@ -13,7 +13,7 @@
     }
 
     address a {
-      @include color($color-highlight);
+      @include color($color-accent);
     }
   }
 

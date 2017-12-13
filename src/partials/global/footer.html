@@ -1,10 +1,10 @@
-<footer role="contentinfo">
-  <section id="contact" data-magellan-target="contact" role="region">
+<footer class="site-footer">
+  <section id="contact" class="section" data-magellan-target="contact">
     <h2>Kontakt</h2>
     {{> address}}
 
     <h3>Interessiert an einer Zusammenarbeit?</h3>
-    <a class="button secondary" href="mailto:{{client.mail}}">Los gehts!</a>
+    <a class="button secondary" href="mailto:{{client.mail}}" data-module="spam-protection">Los gehts!</a>
   </section>
 
   <div class="top-bar">
@@ -12,7 +12,7 @@
       <small>&copy; {{site.year}} {{client.name}}</small>
     </div>
 
-		<nav class="top-bar-right" role="navigation">
+		<nav class="top-bar-right">
       <ul class="menu small underline">
         <li><button class="button white clear" data-toggle="privacy">Datenschutz</button></li>
         <li><button class="button white clear" data-toggle="imprint">Impressum</button></li>

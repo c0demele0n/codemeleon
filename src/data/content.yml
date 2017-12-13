@@ -8,7 +8,7 @@ entry:
   headline: "Was ist ein <em>codemeleon</em>?"
   subline: "code|me|le|on, das"
   phonetics: "Substantiv, Neutrum<br>[kɔʊ̯dmiːliən]"
-  text: "Ein vielfältiges Individuum aus dem Bereich der Web-Entwicklung, welches sich zusätzlich auf einen Schwerpunkt, bspw. die Frontend-Entwicklung, spezialisiert hat. Seine hohe Auffassungsgabe und die regelmäßige Kooperation mit Designern verleihen diesem ein kreatives Auge für Gestaltungsprozesse. Durch seine Umsicht gelingt es ihm außerdem, sich sehr gut an seine Umgebung anzupassen."
+  text: "Ein vielseitiges Individuum aus dem Bereich der Webentwicklung, welches sich zusätzlich auf einen Schwerpunkt, bspw. die Frontend-Entwicklung, spezialisiert hat. Seine hohe Auffassungsgabe und die regelmäßige Kooperation mit Designern verleihen diesem ein kreatives Auge für Gestaltungsprozesse. Durch seine Flexibilität gelingt es ihm außerdem, sich sehr gut an seine Umgebung anzupassen."
   items:
     - title: "Vorkommen"
       text: "äußerst selten, sehr schwer zu finden"
@@ -19,7 +19,7 @@ entry:
 
 about:
   headline: "Exemplar: Thomas&nbsp;Wedler"
-  text: "Selbständiger Web-Entwickler mit Blick über den Tellerrand. Fokus auf Frontend-Entwicklung mit einem Auge für Design. Klassische Schwächen für Kaffee und Pizza."
+  text: "Selbstständiger Webentwickler mit Blick über den Tellerrand. Fokus auf Frontend-Entwicklung mit einem Auge für Design. Klassische Schwächen für Kaffee und Pizza."
   image: "thomas-wedler.png"
   alt: "Thomas Wedler"
 
@@ -40,7 +40,7 @@ services:
       key: "apps"
 
 quote:
-  text: "It doesn’t make sense to hire smart people and then tell them what to do."
+  text: "The only way to do great work is to love what you do."
   cite: "Steve Jobs"
 
 tools:
@@ -89,8 +89,8 @@ experience:
   headline: "Erfahrung"
   items:
     - company: "codemeleon"
-      job: "Selbstständiger Web-Entwickler"
-      text: "Konzeption, Design und Entwicklung von Webseiten, Web-Apps und hybriden Apps"
+      job: "Selbstständiger Webentwickler"
+      text: "Design und Entwicklung von Webseiten, Web-Apps und hybriden Apps"
       from: "Apr 2017"
       to: "heute"
     - company: "Hochschule Worms"
@@ -99,7 +99,7 @@ experience:
       from: "Apr 2017"
       to: "heute"
     - company: "Schaller & Partner GmbH"
-      job: "Web-Entwickler"
+      job: "Webentwickler"
       text: "Konzeption und Entwicklung von Webseiten, Web-Apps und HTML5-Games"
       from: "Okt 2013"
       to: "März 2017"
